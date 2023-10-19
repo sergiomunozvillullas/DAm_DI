@@ -3,33 +3,61 @@ package model;
 
 public class Libro {
 	private String nombre;
-	private float valor;
+	private String ISBN;
+	private String titulo;
+	private String autor;
+	private Double precio;
 	
-	public Libro(String nombre, float d) {
+	public Libro(String nombre, String ISBN, String titulo, String autor, Double precio) {
 		super();
 		this.nombre = nombre;
-		this.valor = d;
+		this.ISBN = ISBN;
+		this.titulo = titulo;
+		this.autor = autor;
+		this.precio = precio;
 	}
-	//Este constructor recibe un nombre de moneda y le pone su valor
-	public Libro(String moneda) {
-		switch (moneda) {
-		case "Yuan": this.setNombre(moneda);this.setValor(7.71F);break;
-		case "Dolar":this.setNombre(moneda);this.setValor(1.05F);break;
-		case "Euro":this.setNombre(moneda);this.setValor(1.0F);break;
-		default: break;
-		}
-	}
+	
 	public String getNombre() {
 		return nombre;
 	}
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public double getValor() {
-		return valor;
+	public String getISBN() {
+		return ISBN;
 	}
-	public void setValor(float valor) {
-		this.valor = valor;
+	public void setValor(String ISBN) {
+		this.ISBN = ISBN;
+	}
+
+	public String getTitulo() {
+		return titulo;
+	}
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+
+	public String getAutor() {
+		return autor;
+	}
+
+	public void setAutor(String autor) {
+		this.autor = autor;
+	}
+
+	public Double getPrecio() {
+		return precio;
+	}
+
+	public void setPrecio(Double precio) {
+		this.precio = precio;
+	}
+
+	@Override
+	public String toString() {
+		return "Libro [nombre=" + nombre + ", ISBN=" + ISBN + ", titulo=" + titulo + ", autor=" + autor + ", precio="
+				+ precio + "]";
 	}
 	
 	
